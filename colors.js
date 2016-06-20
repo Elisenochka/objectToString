@@ -5,7 +5,7 @@
 function colors(){
 	var check = true;
 	colors = new Array();
-	match = new Array(1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F');
+	match = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F');
 	do {
 	var r = prompt("enter red gradient",'');
 	var g = prompt("enter green gradient",'');
@@ -17,26 +17,26 @@ if(r<16){
 			alert("hex code of color is: #" + r + g + b);
 		}
 		else{
-			i=Math.floor(b/16)-1;
-			ii=b%16-1;
+			i=Math.floor(b/16);
+			ii=b%16;
 			alert("hex code of color is: #" + r + g + match[i]+ match[ii]);
 		}
 	}
 	else{
-		i=Math.floor(b/16)-1;
-		ii=b%16-1;
-		j=Math.floor(g/16)-1;
-		jj=g%16-1;
+		i=Math.floor(b/16);
+		ii=b%16;
+		j=Math.floor(g/16);
+		jj=g%16;
 		alert("hex code of color is: #" + r + match[j]+ match[jj] + match[i]+ match[ii]);
 	}	
 }
 else{
-	i=Math.floor(b/16)-1;
-	ii=b%16-1;
-	j=Math.floor(g/16)-1;
-	jj=g%16-1;
-	k=Math.floor(r/16)-1;
-	kk=r%16-1;
+	i=Math.floor(b/16);
+	ii=b%16;
+	j=Math.floor(g/16);
+	jj=g%16;
+	k=Math.floor(r/16);
+	kk=r%16;
 	alert("hex code of color is: #" + match[k]+ match[kk] + match[j] + match[jj] + match[i] + match[ii]);
 }
 }
